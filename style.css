@@ -1,0 +1,89 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #051024;
+}
+::-webkit-scrollbar-thumb {
+    background: #1A2E55;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+/* Micro Animations */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.flight-card-slide {
+    animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform-origin: top;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hide scrollbar for fleet slider */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Select input custom styling */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23D4AF37' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+}
+
+/* Premium Calendar Override */
+.flatpickr-calendar {
+    background: #0B1D3A !important;
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+.flatpickr-day { color: #F8F9FA !important; }
+.flatpickr-day.inRange { background: #1A2E55 !important; border-color: #1A2E55 !important; box-shadow: none !important; }
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange {
+    background: #D4AF37 !important;
+    border-color: #D4AF37 !important;
+    color: #0B1D3A !important;
+}
+.flatpickr-months .flatpickr-month, .flatpickr-current-month .flatpickr-monthDropdown-months {
+    background: #0B1D3A !important;
+    color: #F8F9FA !important;
+}
+span.flatpickr-weekday { background: #0B1D3A !important; color: #A8C0D8 !important; }
+.flatpickr-monthDropdown-month { background: #0B1D3A !important; }
+.flatpickr-day:hover { background: #1A2E55 !important; border-color: #D4AF37 !important; }
